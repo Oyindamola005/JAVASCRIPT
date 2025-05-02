@@ -140,7 +140,7 @@ width: 400px;
     transition: transform 0.3s ease-in-out;
 }
 body.dark #switch{
-    transform: translateX(24px);
+    transform: translateX(16px);
     background-color: white;
 }
 body.dark {
