@@ -9,7 +9,7 @@ body {
     margin: 0px;
     padding: 0px;
     display: flex;
-    height: 100vh;
+    height: 700px;
     justify-content: center;
     align-items: center;
 
@@ -24,14 +24,14 @@ body {
  justify-content: center;
  display: flex;
  flex-direction: column;
- height: 600px;
+ height: 700px;
  flex: 1;
  background-color: white;
 }
 .Card2{
 background-color: rgb(252,212,224);
-border-radius: 24px;
-height: 600px;
+border-radius: 24px 0px 0px 24px;
+height: 700px;
 align-content: center;
 justify-content: center;
 padding: 0;
@@ -118,6 +118,20 @@ width: 400px;
 }
 .toggle {
   background-color: white;  
-  border-radius: 24px;
+  border-radius: 16px;
   border: 0.2px, solid, black;
+  height: 24px;
+  display: flex;
+  flex-direction: row;
+  width: 60px;
+  position: absolute;
+  margin-top: 0px;
+  left: 16px;
+  top: 16px;
+}
+#switch{
+    border-radius: 60px;
+    height: 16px;
+    width: 16px;
+    background-color: black;
 }
