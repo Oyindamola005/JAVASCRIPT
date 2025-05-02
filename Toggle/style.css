@@ -141,4 +141,23 @@ width: 400px;
 }
 body.dark #switch{
     transform: translateX(24px);
+    background-color: white;
+}
+body.dark {
+    background-color: rgb(25, 1, 15);
+    color: white;
+}
+body.dark .Card1 {
+    background-color: rgb(252,212,224);
+}
+body.dark .Card2 {
+    background-color: rgb(32, 1, 10);
+}
+body.dark #bt2 {
+    background-color: transparent;
+    color: #fc86f4 ;
+    border: 0.1px solid #fc86f4;
+}
+body.dark .toggle {
+    background-color: #13010e
 }
