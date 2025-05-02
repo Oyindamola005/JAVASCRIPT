@@ -117,5 +117,7 @@ width: 400px;
     flex: 1;
 }
 .toggle {
-    
+  background-color: white;  
+  border-radius: 24px;
+  border: 0.2px, solid, black;
 }
