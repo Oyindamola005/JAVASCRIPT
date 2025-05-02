@@ -87,7 +87,7 @@ flex: 1;
     font-weight: 600;
     background-color: rgb(255, 255, 255);
     color: rgb(246, 107, 148);
-    border: 0.1px, solid, rgb(246, 107, 148);
+    border: 0.1px solid rgb(246, 107, 148);
 }
 .cont1 {
     padding: 0;
@@ -119,7 +119,7 @@ width: 400px;
 .toggle {
   background-color: white;  
   border-radius: 16px;
-  border: 0.2px, solid, black;
+  border: 0.2px solid black;
   height: 24px;
   display: flex;
   flex-direction: row;
@@ -137,4 +137,8 @@ width: 400px;
     align-self: center;
     justify-self: start;
     margin: 0px;
+    transition: transform 0.3s ease-in-out;
+}
+body.dark #switch{
+    transform: translateX(24px);
 }
