@@ -1,3 +1,4 @@
+
 const questions = [
     {
         question: "what is thw capital of Lagos State?",
@@ -34,53 +35,70 @@ const answer1 =document.getElementById("answer");
 const nextButton = document.getElementById("next");
 const previousButton = document.getElementById ("previous");
 
-function newQuestions(index){
+function newQuestions(index)
+{
     const q = questions [index];
     question1.textcontent=q.question;
-    answersEl.innerHTML = q.answer.map((ans, i) => `
-    <li>
-      <label>
-        <input type="checkbox" name="answer" value="${i}" class="check"
-          ${selected[index] === i ? "checked" : ""}>
-        ${ans}
-      </label>
-    </li>
-  `).join("");
-  document.querySelectorAll('input[name="answer"]').forEach(input => {
-    input.addEventListener("change", (e) => {
-      document.querySelectorAll('input[name="answer"]').forEach(box => {
-        if (box !== e.target) box.checked = false;
-      });
+    answer1.innerHTML =`
+     <ul>
+    ${q.answer.map((ans, i) => `
+      <li>
+        <label>
+          <input type="checkbox" class="check" value="${i}"
+            ${firstAnswer[index].includes(i) ? "checked" : ""}>
+          ${ans}
+        </label>
+      </li>
+    `).join("")}
+  </ul>
+`;
+
+document.querySelectorAll('.check').forEach(input => {
+    input.addEventListener("change", () => {
+      const selected = Array.from(document.querySelectorAll('.check'))
+        .filter(box => box.checked)
+        .map(box => parseInt(box.value));
+      firstAnswer[firstQeustn]= selected;
     });
   });
 }
+  function calculateScore() {
+  let score = 0;
+ firstAnswer.forEach((selected, i) => {
+    const correct = questions[i].correct;
+    if (
+      selected.length === correct.length &&
+      selected.every(val => correct.includes(val))
+    ) {
+      score++;
+    }
+  });
+  return score;
+}
+
 nextButton.addEventListener("click", () => {
-    const selected = getfirstAnswer()
+
   
     if (selected === null) {
       alert("Please select an answer.");
       return;
     }
-   firstAnswer[firstQeustn] = selected;
-
   firstQeustn++;
 
   if (firstQeustn < questions.length) {
-    renderQuestion(firstQeustn);
+    newQuestions(firstQeustn);
 } else {
-    // Calculate score
-   firstAnswer.forEach((ans, i) => {
-      if (ans === questions[i].correct) score++;
-    });
+
+   const score = calculateScore();
     document.querySelector(".quiz_container").innerHTML = `
       <h2>Quiz Completed</h2>
       <p>You scored ${score} out of ${questions.length}.</p>
-    `;
+      `;
   }
 });
 previousButton.addEventListener("click",() => {
     if (firstQeustn > 0) {
         firstQeustn--;
-        renderQuestion(firstQeustn);
+        newQuestions(firstQeustn);
     }
     });
