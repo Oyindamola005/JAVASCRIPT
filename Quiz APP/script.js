@@ -29,7 +29,7 @@ const questions = [
 ];
 let firstQeustn=0;
 let score =0;
-let firstAnswer = new Array(questions.lenght).fill(null);
+let firstAnswer = new Array(questions.lenght).fill([]);
 const question1 = document.getElementById("question");
 const answer1 =document.getElementById("answer");
 const nextButton = document.getElementById("next");
@@ -77,14 +77,12 @@ document.querySelectorAll('.check').forEach(input => {
 }
 
 nextButton.addEventListener("click", () => {
-
-  
-    if (selected === null) {
+    if (firstAnswer[firstQeustn].length===0){
       alert("Please select an answer.");
       return;
     }
   firstQeustn++;
-
+  
   if (firstQeustn < questions.length) {
     newQuestions(firstQeustn);
 } else {
