@@ -102,3 +102,5 @@ previousButton.addEventListener("click",() => {
         newQuestions(firstQeustn);
     }
     });
+
+    newQuestions(firstQeustn);
