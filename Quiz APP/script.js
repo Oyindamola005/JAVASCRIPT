@@ -1,27 +1,27 @@
 
-const questions = [
+const question = [
     {
-        question: "what is thw capital of Lagos State?",
+        questiona:"what is thw capital of Lagos State?",
         answer: ["Abuja" , "Abeokuta" , "Ikeja", "Ibadan"],
         correct:2
     },
     {
-        question: "When did Nigeria receive her Independence?",
+        questionb:"When did Nigeria receive her Independence?",
         answer: ["1960" , "1953" , "1900", "1920"],
         correct:0
     },
     {
-        question: "What is the captal of Abuja?",
+        questionc:"What is the captal of Abuja?",
         answer: ["Lagos","Jos","FCT", "Ekiti"],
         correct:2
     },
     {
-        question: "what is thw capital of Lagos State?",
+        questiond:"what is thw capital of Lagos State?",
         answer: ["Abuja" , "Abeokuta" , "Ikeja", "Ibadan"],
         correct:2
     },
     {
-        question: "What is the captal of Abuja?",
+        questione:"What is the captal of Abuja?",
         answer: ["Lagos","Jos","FCT", "Ekiti"],
         correct:2
     }
@@ -29,7 +29,7 @@ const questions = [
 ];
 let firstQeustn=0;
 let score =0;
-let firstAnswer = new Array(questions.lenght).fill([]);
+let firstAnswer = new Array(question.lenght).fill([]);
 const question1 = document.getElementById("question");
 const answer1 =document.getElementById("answer");
 const nextButton = document.getElementById("next");
@@ -37,8 +37,8 @@ const previousButton = document.getElementById ("previous");
 
 function newQuestions(index)
 {
-    const q = questions [index];
-    question1.textcontent=q.question;
+    const q = question [index];
+    question1.textcontent=q.questiona;
     answer1.innerHTML =`
      <ul>
     ${q.answer.map((ans, i) => `
@@ -65,7 +65,7 @@ document.querySelectorAll('.check').forEach(input => {
   function calculateScore() {
   let score = 0;
  firstAnswer.forEach((selected, i) => {
-    const correct = questions[i].correct;
+    const correct = question[i].correct;
     if (
       selected.length === correct.length &&
       selected.every(val => correct.includes(val))
@@ -82,8 +82,8 @@ nextButton.addEventListener("click", () => {
       return;
     }
   firstQeustn++;
-  
-  if (firstQeustn < questions.length) {
+
+  if (firstQeustn < question.length) {
     newQuestions(firstQeustn);
 } else {
 
