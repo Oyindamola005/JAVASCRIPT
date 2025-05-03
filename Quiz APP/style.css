@@ -25,14 +25,14 @@ body {
     flex-direction: column;
     text-align: start;
     background-color: rgb(244, 240, 247);
-    padding: 120px;
+    padding: 2rem;
     margin: 0;
     gap: 16px;
-    align-self: self-start;
+    align-self: flex-start;
     align-content: start;
     justify-content: start;
     border-radius: 16px;
-    box-shadow: 8 8 16px rgba(235, 235, 235, 0.1);
+    box-shadow: 8px 8px 16px rgba(235, 235, 235, 0.1);
   }
   
   .buttons {
@@ -50,6 +50,11 @@ body {
     text-align: center;
     background-color: #ddd;
     color: rgb(48, 47, 47);
+  }
+  .quiz_container h4{
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
   }
   #next {
     padding: 16px;
@@ -69,22 +74,18 @@ body {
     border:0.5px solid #34a93a;
     color:#34a93a ;
   }
-  
-  .hidden {
-    display: none;
+  #answer {
+    padding: 0;
+    margin: 0;
   }
-  
-  #answers button {
-    display: block;
-    margin: 10px;
-    padding: 10px;
-    width: 100%;
-    font-size: 16px;
-    cursor: pointer;
-    border: 1px solid #ddd;
-    background-color: #f9f9f9;
+  #question {
+    padding: 0;
+    margin: 0;
   }
-  
-  #answers button:hover {
-    background-color: #e1e1e1;
+  .questn_container {
+    gap: 8px;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
   }
