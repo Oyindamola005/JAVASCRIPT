@@ -1,36 +1,31 @@
 const questions = [
   {
-      question: "what is thw capital of Lagos State?",
-      answer: ["Abuja" , "Abeokuta" , "Ikeja", "Ibadan"],
+      question1: "what is thw capital of Lagos State?",
+      answer1: ["Abuja" , "Abeokuta" , "Ikeja", "Ibadan"],
       correct:2
   },
   {
-      question: "When did Nigeria receive her Independence?",
-      answer: ["1960" , "1953" , "1900", "1920"],
+      question2: "When did Nigeria receive her Independence?",
+      answer2: ["1960" , "1953" , "1900", "1920"],
       correct:0
   },
   {
-      question: "What is the captal of Abuja?",
-      answer: ["Lagos","Jos","FCT", "Ekiti"],
+      question3: "What is the captal of Abuja?",
+      answer3: ["Lagos","Jos","FCT", "Ekiti"],
       correct:2
   },
   {
-      question: "what is thw capital of Lagos State?",
-      answer: ["Abuja" , "Abeokuta" , "Ikeja", "Ibadan"],
+      question4: "what is thw capital of Lagos State?",
+      answer4: ["Abuja" , "Abeokuta" , "Ikeja", "Ibadan"],
       correct:2
   },
-  {
-      question: "What is the captal of Abuja?",
-      answer: ["Lagos","Jos","FCT", "Ekiti"],
-      correct:2
-  }
   
 ];
-let firstQeustn=0;
+let firstQeustn=question1;
 let score =0;
-let firstAnswer = new Array(questions.lenght).fill(null);
-const question1 = document.getElementById("question");
-const answer1 =document.getElementById("answer");
+let firstAnswer = answer1;
+const question1 = document.getElementById.innerHTML("question");
+const answer1 =document.getElementById.innerHTML("answer");
 const nextButton = document.getElementById("next");
 const previousButton = document.getElementById ("previous");
 
