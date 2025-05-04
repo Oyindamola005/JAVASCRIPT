@@ -34,7 +34,7 @@ const answer1 =document.getElementById("answer");
 const nextButton = document.getElementById("next");
 const previousButton = document.getElementById ("previous");
 
-nextButton.addEventListener("click", () => {
+nextButton.addEventListener("click", function () {
 
 
   if (selected === null) {
@@ -44,7 +44,7 @@ nextButton.addEventListener("click", () => {
 firstQeustn++;
 
 if (firstQeustn < questions.length) {
-  newQuestions(firstQeustn);
+  questions(firstQeustn);
 } else {
 
  const score = calculateScore();
@@ -54,8 +54,9 @@ if (firstQeustn < questions.length) {
     `;
 }
 });
-previousButton.addEventListener("click",() => {
+previousButton.addEventListener("click",function () {
   if (firstQeustn > 0) {
       firstQeustn--;
+      questions(firstQeustn);
   }
   });
