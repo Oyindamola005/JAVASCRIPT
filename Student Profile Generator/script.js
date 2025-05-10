@@ -24,10 +24,20 @@ const students = [
                 courses: ["mee212","mth204",],
                 },
 ]
-const [thirdStudent] = students;
+const [, , thirdStudent] = students;
 const {firstName, lastName, age , score , courses}= thirdStudent;
-console.log(firstName);
-console.log(lastName);
-console.log(age);
-console.log(score);
-console.log(courses);
+alert(firstName);
+alert(lastName);
+alert(age);
+alert(score);
+alert(courses);
+
+students.forEach(function(student){
+    const { firstName , lastName , age , score, courses} = student;
+
+    alert(`Student Profile: 
+        Name : ${firstName} ${lastName} 
+        Age :${age} 
+        Score: ${score} 
+        Courses: ${courses} `)
+});
