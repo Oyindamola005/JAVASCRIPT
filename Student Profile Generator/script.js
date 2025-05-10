@@ -26,16 +26,16 @@ const students = [
 ]
 const [, , thirdStudent] = students;
 const {firstName, lastName, age , score , courses}= thirdStudent;
-alert(firstName);
-alert(lastName);
-alert(age);
-alert(score);
-alert(courses);
+console.log(firstName);
+console.log(lastName);
+console.log(age);
+console.log(score);
+console.log(courses);
 
 students.forEach(function(student){
     const { firstName , lastName , age , score, courses} = student;
 
-    alert(`Student Profile: 
+   console.log(`Student's Profile: 
         Name : ${firstName} ${lastName} 
         Age :${age} 
         Score: ${score} 
