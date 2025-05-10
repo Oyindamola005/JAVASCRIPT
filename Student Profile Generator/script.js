@@ -24,20 +24,29 @@ const students = [
                 courses: ["mee212","mth204",],
                 },
 ]
+
+//destructuring to extract
 const [, , thirdStudent] = students;
 const {firstName, lastName, age , score , courses}= thirdStudent;
-console.log(firstName);
-console.log(lastName);
-console.log(age);
-console.log(score);
-console.log(courses);
+alert(firstName);
+alert(lastName);
+alert(age);
+alert(score);
+alert(courses);
 
+//for each
 students.forEach(function(student){
     const { firstName , lastName , age , score, courses} = student;
 
-   console.log(`Student's Profile: 
+   alert(`Student's Profile: 
         Name : ${firstName} ${lastName} 
         Age :${age} 
         Score: ${score} 
         Courses: ${courses} `)
 });
+
+//mapping
+const Newstudent = students.map(({firstName , lastName , age , score , courses}) => {
+   return(`${firstName} ${lastName} is ${age} years old and scored ${score}. She is taking : ${courses}`) 
+});
+Newstudent.forEach(Student_profile => alert(Student_profile));
